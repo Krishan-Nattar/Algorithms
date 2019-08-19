@@ -3,26 +3,21 @@
 import argparse
 
 def find_max_profit(prices):
+  max_profit = 0
 
-  #take in prices
-  print(prices)
+  stored_value = prices[0]
+  max_profit = prices[1]-prices[0]
+  index = 2
+  while True:
+    if index > len(prices):
+      break
+    for price in prices[index-1:]:
+      if price - stored_value > max_profit:
+        max_profit = price - stored_value
+      stored_value=prices[index-1]
+    index += 1
+  return max_profit
 
-  #split prices into an array based on spaces
-
-  #take first item
-
-  #for every other item... subtract the first item. Whichever is the biggest number, store that.
-
-  #go to next item. If any subsequent item minus current item is larger than the previously stored item, replace stored item.
-
-  #if last item in array, don't do anything.
-
-  #return final stored item
-
-
-
-
-  pass
 
 
 if __name__ == '__main__':
