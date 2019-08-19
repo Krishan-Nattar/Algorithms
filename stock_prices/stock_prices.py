@@ -4,7 +4,6 @@ import argparse
 
 def find_max_profit(prices):
   max_profit = 0
-
   stored_value = prices[0]
   max_profit = prices[1]-prices[0]
   index = 2
