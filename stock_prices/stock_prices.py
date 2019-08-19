@@ -3,6 +3,25 @@
 import argparse
 
 def find_max_profit(prices):
+
+  #take in prices
+  print(prices)
+
+  #split prices into an array based on spaces
+
+  #take first item
+
+  #for every other item... subtract the first item. Whichever is the biggest number, store that.
+
+  #go to next item. If any subsequent item minus current item is larger than the previously stored item, replace stored item.
+
+  #if last item in array, don't do anything.
+
+  #return final stored item
+
+
+
+
   pass
 
 
