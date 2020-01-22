@@ -7,8 +7,8 @@ import sys
 # recursive solution
 def eating_cookies(n, cache=None):
 
-  arr = [1,1,2] + [0] * (n-2)
-    # Every subsequent cookie will have a total amount of ways to eat it EQUAL to the sum of the count of the 3 below it.
+  arr = {0:1, 1:1, 2:2}
+    # Every subsequent cookie will have a total amount of ways to eat it EQUAL to the sum of the count of the 3 before it.
   for number in range(3, n+1):
     arr[number] = arr[number-3]+arr[number-2]+arr[number-1]
   return arr[n]
