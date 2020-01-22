@@ -26,15 +26,13 @@ sub_count = 1
 # # [1,1,1,1,1,2,2,2,2,2,2]
 def making_change(amount, denominations):
 
-  test = [1] * (amount +1)
+  test = [1] * (amount + 1)
 
   for index in denominations:
     if index != 1:
       for place in range(index, amount + 1):
         test[place] = test[place] + test[place - index]
   return test[amount]
-
-
 
 if __name__ == "__main__":
   # Test our your implementation from the command line
