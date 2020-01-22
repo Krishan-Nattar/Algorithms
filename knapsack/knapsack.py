@@ -22,9 +22,7 @@ def knapsack_solver(items, capacity):
       print(obj.index)
       print(obj.size)
       print(obj.value)
-  # print("******************************")
-  # print(capacity)
-  # print("******************************")
+
   return {'Value': value, 'Chosen': chosen}
   # pass
   # {'Value': 197, 'Chosen': [1, 7, 8]}

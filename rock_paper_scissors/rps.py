@@ -1,33 +1,43 @@
 #!/usr/bin/python
-# merge([1,3,5,7], [2,4,6,8])
-# [1,2,3,4,5,6,7,8]
+
 import sys
 
-def rps_recursion(number, list):
-  if number == 0:
-    return number
 
+# def rock_paper_scissors(n):
+#   result_array = []
+#   selection = ['rock', 'paper', 'scissors']
+#   answer = []
+
+
+#   def recursive_listing(iterations):
+#     nonlocal answer
+#     # Set base case
+#     if iterations == 0:
+#       return result_array.append(answer)
+#     for choice in selection:
+#       answer = answer + [choice]
+#       recursive_listing(iterations -1)
+
+#   recursive_listing(n)
+
+#   return result_array
+
+# rock_paper_scissors(2)
 
 def rock_paper_scissors(n):
   result_array = []
   selection = ['rock', 'paper', 'scissors']
 
   def recursive_listing(iterations, result=[]):
-    # print(iterations)
+
     # Set base case
     if iterations == 0:
       return result_array.append(result)
-      # return 
     for choice in selection:
       recursive_listing(iterations -1, result + [choice])
 
   recursive_listing(n)
   return result_array
-
-
-
-  return return_list
-
 
 rock_paper_scissors(2)
 
