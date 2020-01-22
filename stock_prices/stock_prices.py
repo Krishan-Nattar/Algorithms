@@ -3,7 +3,7 @@
 import argparse
 
 def find_max_profit(prices):
-  max_profit = 0
+  # max_profit = 0
   stored_value = prices[0]
   max_profit = prices[1]-prices[0]
   index = 2
@@ -13,7 +13,7 @@ def find_max_profit(prices):
     for price in prices[index-1:]:
       if price - stored_value > max_profit:
         max_profit = price - stored_value
-      stored_value=prices[index-1]
+    stored_value=prices[index-1]
     index += 1
   return max_profit
 

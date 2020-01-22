@@ -6,8 +6,28 @@ from collections import namedtuple
 Item = namedtuple('Item', ['index', 'size', 'value'])
 
 def knapsack_solver(items, capacity):
-  pass
-  
+  value = 0
+  chosen = []
+  testvalue = []
+  test = []
+
+  # run through the list of items and find all iterations of items
+
+  # if a current iteration has a higher value than the previous iteration (while also being at or below capacity)...
+
+  # replace the value and chosen array with current iteration and keep going
+
+  # While True:
+    for obj in items:
+      print(obj.index)
+      print(obj.size)
+      print(obj.value)
+  # print("******************************")
+  # print(capacity)
+  # print("******************************")
+  return {'Value': value, 'Chosen': chosen}
+  # pass
+  # {'Value': 197, 'Chosen': [1, 7, 8]}
 
 if __name__ == '__main__':
   if len(sys.argv) > 1:

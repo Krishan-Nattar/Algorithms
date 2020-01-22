@@ -1,26 +1,35 @@
 #!/usr/bin/python
-
+# merge([1,3,5,7], [2,4,6,8])
+# [1,2,3,4,5,6,7,8]
 import sys
 
+def rps_recursion(number, list):
+  if number == 0:
+    return number
+
+
 def rock_paper_scissors(n):
-  return_list = []
-  one_list = ['rock','paper','scissors']
+  result_array = []
+  selection = ['rock', 'paper', 'scissors']
 
-  # while True:
-  for num in range(0,n**3):
-    # for item in one_list:
-    #   return_list[num].append(item)
-    return_list.append([])
+  def recursive_listing(iterations, result=[]):
+    # print(iterations)
+    # Set base case
+    if iterations == 0:
+      return result_array.append(result)
+      # return 
+    for choice in selection:
+      recursive_listing(iterations -1, result + [choice])
 
-    # n -= 1
-    # if n == 0:
-      # break
-
-  print(len(return_list))
+  recursive_listing(n)
+  return result_array
 
 
-  # pass 
-rock_paper_scissors(3)
+
+  return return_list
+
+
+rock_paper_scissors(2)
 
 if __name__ == "__main__":
   if len(sys.argv) > 1:
@@ -28,8 +37,4 @@ if __name__ == "__main__":
     print(rock_paper_scissors(num_plays))
   else:
     print('Usage: rps.py [num_plays]')
-
-#3 - 27
-#2 - 9
-#1 3
 
